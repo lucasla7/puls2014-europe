@@ -121,12 +121,26 @@ header #avatar img {
 	width: 55px;
 }
 
-header #logo img { 
+header #logo {
+	/*
+	-webkit-transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-o-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
+	*/
 	border-right: 1px solid white;
-	height: 52px;
 	margin-right: 0.5em;
+}
+
+header #logo img:hover{
+	-webkit-transform:rotate(360deg);
+}
+
+header #logo img { 
+	height: 52px;
 	padding-right: 0.5em;
 	width: 52px;
+	-webkit-transition:0.5s;
 }
 
 nav{
@@ -152,9 +166,19 @@ nav ul #publicar_nav a{
 	border-radius: 5px;
 	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
 	font-style: italic;
-	padding: 0.8em 0.5em;
+	padding: 0.8em 0.5em 0.8em 2.5em;
 	text-decoration: none;
 	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
+}
+
+nav ul #publicar_nav a:before{
+	position:absolute;
+	left:0.1em;
+	top:0;
+}
+
+nav ul #publicar_nav a:hover:before{
+	font-size: 1.2em;
 }
 
 nav ul li{
@@ -165,7 +189,11 @@ nav ul li{
 nav ul li a{
 	color: white;
 	display: block;
-	padding: 0.5em 0;
+	padding: 0.5em;
+	-webkit-transition:0.3s;
+}
+nav ul li a:hover{
+	background: #343b54;
 }
 
 aside {
