@@ -64,7 +64,7 @@ a {
 
 body {
 	background: #eeeeee;
-	font-family: "Open sans";
+	font-family: "Open Sans";
 	font-size: 16px;
 }
 
@@ -302,7 +302,33 @@ aside {
 		margin: 1em;
 		width: 20%;
 	}
+	
 	aside video{
 		width: 100%;
 	}
+}
+
+/****
+FORMULARIO
+*/
+.form{
+	padding: 1em;
+	text-align: right;
+	display:none;
+}
+
+.form input{
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	padding: 0.2em 0.6em;
+}
+
+.form input[type="submit"]{
+	background: #22bce0;
+	border-color: #22bce0;
+	box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
+	color: white;
+	font-style: italic;
+	text-decoration: none;
+	text-shadow: rgba(0,0,0,0.5) 2px 2px 5px;
 }

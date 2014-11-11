@@ -15,7 +15,7 @@
 			<img src="logo.png" />
 		</figure>
 		<h1>
-			Puls2014: Comunidad de comuneros comunes
+			Puls2014: Comudad de comuneros comunes
 		</h1>
 		<figure id="avatar">
 			<img src="avatar.jpg" />
@@ -29,13 +29,19 @@
 			<li><a href="#">CSS3</a></li>
 			<li><a href="#">Django</a></li>
 			<li id="publicar_nav">
-				<a href="#" class="icon-pen">Publicar</a>
+				<a href="#" class="icon-pen" id="view-form-btn">Publicar</a>
 			</li>
 		</ul>
 	</nav>
+	<form action="" id="form" class="form">
+		<input type="text" id="form-title" placeholder="Título" required>
+		<input type="text" id="form-author" placeholder="Autor" required>
+		<input type="url" id="form-url" placeholder="Url" required>
+		<input type="submit" id="form-add" value="Agregar">
+	</form>
 	<aside>
 		<video width="320" height="240" autoplay controls>
-			<source src="./static/videos/lecturas.mp4" type="video/mp4">
+			<source src="./static/videos/lecturas.m4v" type="video/mp4">
 			<source src="./static/videos/lecturas.ogg" type="video/ogg">
 			Your browser does not support the video tag.
 		</video>
@@ -196,5 +202,7 @@
 			LucasLA7 2014
 		</p>
 	</footer>
+	<script src="./static/js/jquery-1.11.1.min.js"></script>
+	<script src="./static/js/form.js"></script>
 </body>
 </html>
