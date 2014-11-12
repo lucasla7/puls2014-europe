@@ -6,8 +6,7 @@ var $form = $("#form"),
 	$button = $("#view-form-btn"),
 	$list = $("#contenido"),
 	$post = $(".item").first();
-
-var id = setInterval (salvarSesion,1000);
+	var id = setInterval (salvarSesion,1000);
 //funciones
 
 if(localStorage.getItem('autosave')){
@@ -20,18 +19,20 @@ function salvarSesion(){
 	sesionStorage.setItem ('url',$url.val);
 }
 
-function viewHideForm(){
+function viewHideForm(e){
+	e.preventDefault();
 	$form.slideToggle();
-	return false; //sirve para que no se vaya arriba cuando se pulsa el boton
+	//return false; //sirve para que no se vaya arriba cuando se pulsa el boton
 }
 
-function addPost(){
+function addPost(e){
 	var url = $url.val(),
 		title = $title.val(),
 		author = $author.val(),
 		$clone = $post.clone(),
 		linktitulo = $clone.find('.titulo_item a'),
 		linkautor = $clone.find('.autor_item a');
+	e.preventDefault();
 	linktitulo.text(title);
 	linktitulo.attr('href', url);
 	linkautor.text(author);
@@ -42,9 +43,10 @@ function addPost(){
 	$title.val("");
 	$url.val("");
 	$clone.fadeIn();
-	return false;
+	//return false;
 }
 
 //eventos
 $button.on("click", viewHideForm);
 $form.on("submit", addPost);
+$form.on("blur",salvarsesion);
