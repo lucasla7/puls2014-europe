@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="Mostrar url en div" />
+	<title>jQuery para cargar url en div con id capa</title>
+	<!-- Libreria jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
+	<!--- Codigo javasript que carga la pagina en el div-->
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#capa").load('http://www.telize.com/geoip?callback=');
+			//Utilizar un servidor que tenga en Header Access-Control-Allow-Origin con el valor "*", por ejemplo una api publica, en este ejemplo uso una de geolocalizacion ip gratuita
+		});
+	</script>
+</head>
+<body>
+	<h1>
+		jQuery para cargar url en div con id capa
+	</h1>
+	<h2>
+		A partir de aquí el div con id capa aparece mostrando la url que le pases por jQuery dentro, en este ejemplo son las coordenadas de geolocalización ip
+	</h2>
+	<div id="capa">
+	</div>
+	<h2>
+		Aquí finaliza el div con id capa con la url que le pases por jQuery dentro
+	</h2>
+</body>
+</html>
